@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Slider from "react-slick";
-import { Timeline } from 'react-twitter-widgets'
 
 import './index.css';
+import '../../components/Scene3D';
 
 class ViewMain extends Component {
 
