@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-encrypted</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D-home" transform="translate(-722.000000, -681.000000)">
+            <g id="Group" transform="translate(555.000000, 107.000000)">
+                <g id="USP's" transform="translate(7.000000, 572.000000)">
+                    <g id="icon-encrypted" transform="translate(155.000000, 0.000000)">
+                        <rect id="position" x="0" y="0" width="24" height="24"></rect>
+                        <g transform="translate(5.500000, 2.500000)" stroke="#FFFFFF">
+                            <rect id="Rectangle" x="0" y="7" width="13" height="12" rx="3"></rect>
+                            <polyline id="Rectangle-3" stroke-linecap="round" stroke-linejoin="round" transform="translate(6.429964, 12.429964) rotate(-225.000000) translate(-6.429964, -12.429964) " points="3.80267754 11.1324104 9.05725038 11.1324104 9.05725038 13.7275175"></polyline>
+                            <path d="M6.5,0 L6.5,0 C8.43299662,-3.55085719e-16 10,1.56700338 10,3.5 L10,7 L3,7 L3,3.5 C3,1.56700338 4.56700338,3.55085719e-16 6.5,0 Z" id="Rectangle"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

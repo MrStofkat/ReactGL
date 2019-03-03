@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-peer-to-peer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D-home" transform="translate(-473.000000, -705.000000)">
+            <g id="icon-peer-to-peer" transform="translate(471.000000, 703.000000)">
+                <rect id="position" x="0" y="0" width="24" height="24"></rect>
+                <g id="icon-upload" transform="translate(3.000000, 3.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18.2592593,8.60493827 L18.2592593,14 C18.2592593,15.6568542 16.9161135,17 15.2592593,17 L3,17 C1.34314575,17 -5.57523343e-14,15.6568542 -5.59552404e-14,14 L-5.68434189e-14,8.60493827" id="Rectangle-2"></path>
+                    <g id="arrow" transform="translate(5.246914, 0.000000)">
+                        <polyline id="Rectangle-3" transform="translate(3.882716, 3.882716) rotate(-45.000000) translate(-3.882716, -3.882716) " points="1.25925926 1.25925926 6.50617284 1.25925926 6.50617284 6.50617284"></polyline>
+                        <path d="M3.88271605,12.4876543 L3.88271605,0.314814815" id="Line"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

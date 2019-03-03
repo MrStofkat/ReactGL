@@ -1,0 +1,148 @@
+.App {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 0px #bbb;
+    font-weight: 200;
+    color: #fff;
+    transition: background 0.5s;
+
+}
+
+.container-circle-icon {
+  background-image: linear-gradient(to right, #88CC88 0%, #77CC77 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.timeline-Widget {
+    background: #33333355 !important;
+}
+
+h1 {
+  font-size: 80px;
+  color: #333;
+  line-height: 80px;
+  text-shadow: none;  
+  @media (max-width:800px) { 
+    font-size: 60px;
+  }
+}
+
+h2 {
+  font-weight: 100;
+}
+
+.header-spacious {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+}
+
+a {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  transition: filter 0.5s;
+}
+
+a:hover {
+	filter: brightness(75%);
+}
+
+.header-logo {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.App-title {
+  font-size: 1rem;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.view-info {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  max-width: 720px;
+  color: #9B9B9B;
+  text-shadow: none;
+  animation: backgroundFadeAnimation 4s;
+}
+
+.container-intro {
+  padding: 10px;
+  padding-bottom: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-intro-text {
+  color: #9B9B9B;
+  font-size: 24px;
+  font-family: 'Roboto';
+  margin-bottom: 30px;
+}
+  
+.col-md-6{
+  flex: 1;
+ display: inline-block;
+}
+
+.button-download {
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  max-width: 300px;
+}
+
+.button-download:hover {
+  background-color: #555;
+}
+
+ @media (max-width:800px){
+  .container-intro {
+    flex-direction: column;
+  }
+}
+
+@keyframes backgroundFadeAnimation {
+  background-color: rgba(10, 10, 10, 0.2);
+  background-color: rgba(10, 10, 10, 0.3);
+}
+

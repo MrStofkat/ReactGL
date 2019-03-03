@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="36px" viewBox="0 0 26 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-bulb</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D-info" transform="translate(-1068.000000, -1427.000000)">
+            <g id="Group-4" transform="translate(340.000000, 1384.000000)">
+                <g id="img" transform="translate(691.000000, 10.000000)">
+                    <g id="icon-bulb" transform="translate(26.000000, 26.000000)">
+                        <rect id="position" x="0" y="0" width="48" height="48"></rect>
+                        <g id="Group-2" transform="translate(12.000000, 8.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M6,22.3946137 C2.41319178,20.3197571 0,16.4416941 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,16.4416941 21.5868082,20.3197571 18,22.3946137 L18,30 L15,34 L9,34 L6,30 L6,22.3946137 Z" id="Oval-2"></path>
+                            <path d="M19,12 C19,8.13400675 15.8659932,5 12,5" id="Oval-2"></path>
+                            <path d="M7,25 L17,25" id="Line-2"></path>
+                            <path d="M7,29.5 L17,29.5" id="Line-2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
