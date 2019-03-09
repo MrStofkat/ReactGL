@@ -1,22 +1,24 @@
 import Object2D from './Object2D';
 import MoveableObject from './MoveableObject';
+import GridTile from './GridTile';
+import BackgroundLayer from './BackgroundLayer';
 
 
 export default class World {
 
   constructor(props) {
-    this.backgroundLayer;
+    this.backgroundLayer = undefined;
     //Scrolling parts
-    this.backgroundFXLayer1A;
-    this.backgroundFXLayer1B;
-    this.backgroundFXLayer2A;
-    this.backgroundFXLayer2B;
+    this.backgroundFXLayer1A = undefined;
+    this.backgroundFXLayer1B = undefined;
+    this.backgroundFXLayer2A = undefined;
+    this.backgroundFXLayer2B = undefined;
 
-    this.textures;
+    this.textures = undefined;
     this.gravity = 1;
-    this.actors;
-    this.objects;
-    this.player;
+    this.actors = undefined;
+    this.objects = undefined;
+    this.playe = undefined;
     this.width = 20;
     this.height = 20;
     this.tileWidth = 0.5;
@@ -24,14 +26,14 @@ export default class World {
     this.grid = [];
     this.layers = 3;
 
-    this.normalsBuffer;
-    this.verticesBuffer;
-    this.textureBuffer;
-    this.vertexIndexBuffer;
+    this.normalsBuffer = undefined;
+    this.verticesBuffer = undefined;
+    this.textureBuffer = undefined;
+    this.vertexIndexBuffer = undefined;
   }
 
   init() {
-    for (var i = 0; i < sBuilder.numberOfLayers; i++) {
+    for (var i = 0; i < 3; i++) {
       this.grid[i] = [];
     }
 
@@ -89,15 +91,15 @@ export default class World {
   }
 
   fx() {//Do all FX related stuff in the world
-    this.backgroundFXLayer1A.x -= this.backgroundFXLayer1A.scrollingX;
-    this.backgroundFXLayer1B.x -= this.backgroundFXLayer1B.scrollingX;
-    this.backgroundFXLayer2A.x -= this.backgroundFXLayer2A.scrollingX;
-    this.backgroundFXLayer2B.x -= this.backgroundFXLayer2B.scrollingX;
+    // this.backgroundFXLayer1A.x -= this.backgroundFXLayer1A.scrollingX;
+    // this.backgroundFXLayer1B.x -= this.backgroundFXLayer1B.scrollingX;
+    // this.backgroundFXLayer2A.x -= this.backgroundFXLayer2A.scrollingX;
+    // this.backgroundFXLayer2B.x -= this.backgroundFXLayer2B.scrollingX;
 
-    if (this.backgroundFXLayer1A.x < -this.backgroundFXLayer1A.width - 7) this.backgroundFXLayer1A.x = (this.backgroundFXLayer1B.width * 2) + this.backgroundFXLayer1B.x;
-    if (this.backgroundFXLayer1B.x < -this.backgroundFXLayer1B.width - 7) this.backgroundFXLayer1B.x = (this.backgroundFXLayer1A.width * 2) + this.backgroundFXLayer1A.x;
-    if (this.backgroundFXLayer2A.x < -this.backgroundFXLayer2A.width - 7) this.backgroundFXLayer2A.x = (this.backgroundFXLayer2B.width * 2) + this.backgroundFXLayer2B.x;
-    if (this.backgroundFXLayer2B.x < -this.backgroundFXLayer2B.width - 7) this.backgroundFXLayer2B.x = (this.backgroundFXLayer2A.width * 2) + this.backgroundFXLayer2A.x;
+    // if (this.backgroundFXLayer1A.x < -this.backgroundFXLayer1A.width - 7) this.backgroundFXLayer1A.x = (this.backgroundFXLayer1B.width * 2) + this.backgroundFXLayer1B.x;
+    // if (this.backgroundFXLayer1B.x < -this.backgroundFXLayer1B.width - 7) this.backgroundFXLayer1B.x = (this.backgroundFXLayer1A.width * 2) + this.backgroundFXLayer1A.x;
+    // if (this.backgroundFXLayer2A.x < -this.backgroundFXLayer2A.width - 7) this.backgroundFXLayer2A.x = (this.backgroundFXLayer2B.width * 2) + this.backgroundFXLayer2B.x;
+    // if (this.backgroundFXLayer2B.x < -this.backgroundFXLayer2B.width - 7) this.backgroundFXLayer2B.x = (this.backgroundFXLayer2A.width * 2) + this.backgroundFXLayer2A.x;
 
   }
 

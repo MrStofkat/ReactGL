@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import {Matrix, Vector, $V, $M} from './sylvester';
-import World from '../../engine/World';
-import Player from '../../engine/Player';
-import {makePerspective} from './glUtils';
+import { Matrix, Vector} from 'sylvester';
+import World from './engine/World';
+import Player from './engine/Player';
+import TextureLibrary from './engine/TextureLibrary';
+import { makePerspective } from './glUtils';
 let shaderProgram = undefined;
 let vertexPositionAttribute = undefined;
-let textureCoordAttribute =  undefined;
+let textureCoordAttribute = undefined;
 let vertexNormalAttribute = undefined;
 class Scene3D extends Component {
 
@@ -19,11 +20,21 @@ class Scene3D extends Component {
   componentDidMount() {
 
     window.gl = this.canvas.getContext("experimental-webgl");
+
+    this.initShaders();
+
+        //First we load the texture library
+    // Then where we call the routine that builds all the objects
+    // we'll be drawing.
+    window.sTextureLibrary = new TextureLibrary();
+    window.sTextureLibrary.load();
+
     this.mvMatrixStack = [];
 
     this.objects = new Array();
     this.particles = new Array();
     this.world = new World();
+    this.world.init();
 
     this.textureBuffer = this.world.textureBuffer;
     this.normalsBuffer = this.world.normalsBuffer;
@@ -53,10 +64,10 @@ class Scene3D extends Component {
 
     this.mvTranslate([0, 0, -8]);
 
-
     this.mvUniform = window.gl.getUniformLocation(shaderProgram, "uMVMatrix");
     this.nUniform = window.gl.getUniformLocation(shaderProgram, "uNormalMatrix");
     this.pUniform = window.gl.getUniformLocation(shaderProgram, "uPMatrix");
+
 
 
     this.player = new Player();
@@ -64,7 +75,7 @@ class Scene3D extends Component {
 
 
     // Set up to draw the scene periodically.
-    setInterval(this.drawScene, 30);
+    setInterval(()=> {this.drawScene();} , 30);
 
   }
 
@@ -72,7 +83,7 @@ class Scene3D extends Component {
   drawScene() {
 
     this.world.fx();
-
+    
     window.gl.clearColor(0.3, .3, 1.0, 1.0);
 
     // Clear the canvas before we start drawing on it.
@@ -250,7 +261,7 @@ class Scene3D extends Component {
   }
 
   mvTranslate(v) {
-    this.multMatrix(Matrix.Translation($V([v[0], v[1], v[2]])).ensure4x4());
+    this.multMatrix(Matrix.Translation(Vector.create([v[0], v[1], v[2]])).ensure4x4());
   }
 
   setMatrixUniforms() {
@@ -278,8 +289,8 @@ class Scene3D extends Component {
   mvRotate2Axis(angleX, angleY) {
     var inRadiansX = angleX * Math.PI / 180.0;
     var inRadiansY = angleY * Math.PI / 180.0;
-    var rotMatrixX = Matrix.Rotation(inRadiansX, $V([0, 1, 0])).ensure4x4();
-    var rotMatrixY = Matrix.Rotation(inRadiansY, $V([1, 0, 0])).ensure4x4();
+    var rotMatrixX = Matrix.Rotation(inRadiansX, Vector.create([0, 1, 0])).ensure4x4();
+    var rotMatrixY = Matrix.Rotation(inRadiansY, Vector.create([1, 0, 0])).ensure4x4();
     var endMatrix = rotMatrixY.x(rotMatrixX);
 
     this.mvMatrix = this.mvMatrix.x(endMatrix);
@@ -287,7 +298,7 @@ class Scene3D extends Component {
 
   mvRotate(angle, v) {
     var inRadians = angle * Math.PI / 180.0;
-    var m = Matrix.Rotation(inRadians, $V([v[0], v[1], v[2]])).ensure4x4();
+    var m = Matrix.Rotation(inRadians, Vector.create([v[0], v[1], v[2]])).ensure4x4();
     this.multMatrix(m);
   }
 

@@ -105,7 +105,7 @@ export default class Object2D {
     window.gl.bufferData(window.gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(vertexIndices), window.gl.STATIC_DRAW);
 
     //debugger;
-    this.texture = undefined// sTextureLibrary.textures[this.name];
+    this.texture = window.sTextureLibrary.textures[this.name];
     //debugger;
     // this.initTextures(this.imageName);
   }

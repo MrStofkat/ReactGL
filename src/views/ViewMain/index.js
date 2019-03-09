@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './index.css';
-import '../../components/Scene3D';
+import Scene3D from '../../components/Scene3D';
 
 class ViewMain extends Component {
 
