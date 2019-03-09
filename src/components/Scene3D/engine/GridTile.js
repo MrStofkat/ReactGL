@@ -10,6 +10,10 @@ export default class GridTile {
     this.size=0;
     this.tileWidth = 1;
     this.tileHeight = 1;
+    this.normalsBuffer = undefined;
+    this.verticesBuffer = undefined;
+    this.textureBuffer = undefined;
+    this.vertexIndexBuffer = undefined;
   }
 
   init(x, y, z, imgName, isBlocking) {
@@ -19,10 +23,7 @@ export default class GridTile {
     this.id = x * y * z;
     this.isBlocking = isBlocking;
     this.texture = window.sTextureLibrary.textures[imgName];
-    this.normalsBuffer = undefined;
-    this.verticesBuffer = undefined;
-    this.textureBuffer = undefined;
-    this.vertexIndexBuffer = undefined;
+
     this.create();
   }
 

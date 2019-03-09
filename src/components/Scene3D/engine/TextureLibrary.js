@@ -20,7 +20,6 @@ export default class TextureLibrary {
     console.log("Loading texture:" + imgName);
 
     this.currentName = imgName;
-    //console.log("loading imagefile:"+ imgPath);
     this.texture = window.gl.createTexture();
     this.image = new Image();
     this.instance = this;
@@ -56,7 +55,7 @@ export default class TextureLibrary {
     //Done loading the image, now we can load the next one
     this.instance.index++;
     if (this.instance.index < this.instance.textureList.length) { this.instance.loadNext(); }
-    // else { this.instance.onFinished(); }
+    else { this.instance.onFinished(); }
   }
 
 

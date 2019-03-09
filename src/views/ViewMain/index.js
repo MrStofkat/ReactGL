@@ -19,9 +19,8 @@ class ViewMain extends Component {
 
   render() {
     return (
-      <div className="view-info">
+      <div className="container-3d">
       <Scene3D>
-        
       </Scene3D>
       </div>
     );

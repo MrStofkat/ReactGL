@@ -103,11 +103,7 @@ export default class Object2D {
 
     // Now send the element array to GL
     window.gl.bufferData(window.gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(vertexIndices), window.gl.STATIC_DRAW);
-
-    //debugger;
     this.texture = window.sTextureLibrary.textures[this.name];
-    //debugger;
-    // this.initTextures(this.imageName);
   }
 
 
@@ -120,7 +116,6 @@ export default class Object2D {
     this.create();
 
   }
-
 
   init(x, y, z, width, height, image, index) {
     if (!window.gl) alert("no gl context found in object!");
@@ -137,9 +132,6 @@ export default class Object2D {
     this.create();
   }
 
-
-
-
   doActions() {
     //Overide this method
   }
@@ -153,16 +145,6 @@ export default class Object2D {
 
 
   move() {
-
-    // this.x +=this.headingX;
-    // this.y +=this.headingY;
-
-    //this.y = (this.y*.95)+(0.3*(Math.cos(Math.tan(this.x*2*this.index))));
-
-    //        this.index+=this.add;
-    //        if(this.index>1.3)this.index=0;
-
-
     this.index++;
     if (this.index % 500 == 0) {
       this.headingX = ((Math.random() * 2) - 1) / 100;
@@ -171,12 +153,10 @@ export default class Object2D {
 
     if (this.x < -4 || this.x > 4) this.headingX = -this.headingX;
     if (this.y < -4 || this.y > 4) this.headingY = -this.headingY;
-
-
   }
 
-  detectCollision(object2D) {
 
+  detectCollision(object2D) {
     if (object2D.x > this.x && object2D.y > this.y && object2D.x < this.x + this.width && object2D.y < this.y + this.height) {
       //collision happened!
     }

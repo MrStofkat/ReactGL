@@ -38,7 +38,6 @@ export default class World {
     }
 
     //this.grid[0] =[];
-
     this.createGrid();
     for (var x = 0; x < this.width; x++) {
       this.grid[0][x] = [];
@@ -86,21 +85,18 @@ export default class World {
     this.backgroundFXLayer2B = new BackgroundLayer();
     this.backgroundFXLayer2B.init(30, 0, 0, 15, 8, "clouds_1", 1111);
     this.backgroundFXLayer2B.scrollingX = 0.005;
-
-
   }
 
   fx() {//Do all FX related stuff in the world
-    // this.backgroundFXLayer1A.x -= this.backgroundFXLayer1A.scrollingX;
-    // this.backgroundFXLayer1B.x -= this.backgroundFXLayer1B.scrollingX;
-    // this.backgroundFXLayer2A.x -= this.backgroundFXLayer2A.scrollingX;
-    // this.backgroundFXLayer2B.x -= this.backgroundFXLayer2B.scrollingX;
+    this.backgroundFXLayer1A.x -= this.backgroundFXLayer1A.scrollingX;
+    this.backgroundFXLayer1B.x -= this.backgroundFXLayer1B.scrollingX;
+    this.backgroundFXLayer2A.x -= this.backgroundFXLayer2A.scrollingX;
+    this.backgroundFXLayer2B.x -= this.backgroundFXLayer2B.scrollingX;
 
-    // if (this.backgroundFXLayer1A.x < -this.backgroundFXLayer1A.width - 7) this.backgroundFXLayer1A.x = (this.backgroundFXLayer1B.width * 2) + this.backgroundFXLayer1B.x;
-    // if (this.backgroundFXLayer1B.x < -this.backgroundFXLayer1B.width - 7) this.backgroundFXLayer1B.x = (this.backgroundFXLayer1A.width * 2) + this.backgroundFXLayer1A.x;
-    // if (this.backgroundFXLayer2A.x < -this.backgroundFXLayer2A.width - 7) this.backgroundFXLayer2A.x = (this.backgroundFXLayer2B.width * 2) + this.backgroundFXLayer2B.x;
-    // if (this.backgroundFXLayer2B.x < -this.backgroundFXLayer2B.width - 7) this.backgroundFXLayer2B.x = (this.backgroundFXLayer2A.width * 2) + this.backgroundFXLayer2A.x;
-
+    if (this.backgroundFXLayer1A.x < -this.backgroundFXLayer1A.width - 7) this.backgroundFXLayer1A.x = (this.backgroundFXLayer1B.width * 2) + this.backgroundFXLayer1B.x;
+    if (this.backgroundFXLayer1B.x < -this.backgroundFXLayer1B.width - 7) this.backgroundFXLayer1B.x = (this.backgroundFXLayer1A.width * 2) + this.backgroundFXLayer1A.x;
+    if (this.backgroundFXLayer2A.x < -this.backgroundFXLayer2A.width - 7) this.backgroundFXLayer2A.x = (this.backgroundFXLayer2B.width * 2) + this.backgroundFXLayer2B.x;
+    if (this.backgroundFXLayer2B.x < -this.backgroundFXLayer2B.width - 7) this.backgroundFXLayer2B.x = (this.backgroundFXLayer2A.width * 2) + this.backgroundFXLayer2A.x;
   }
 
 
@@ -173,9 +169,5 @@ export default class World {
 
     // Now send the element array to GL
     window.gl.bufferData(window.gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(vertexIndices), window.gl.STATIC_DRAW);
-
-
   }
-
-
 }
